@@ -1,0 +1,10 @@
+{
+  "name": "monorepo-env-verify",
+  "version": "1.0.0",
+  "description": "Monorepo environment verification",
+  "private": true,
+  "scripts": {
+    "build": "pnpm --filter fe build"
+  },
+  "packageManager": "pnpm@10.12.1"
+}

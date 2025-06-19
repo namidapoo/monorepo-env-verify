@@ -3,9 +3,12 @@ applications:
   - frontend:
       phases:
         preBuild:
-          commands: ["corepack enable", "pnpm install"]
+          commands: 
+            - corepack enable
+            - pnpm install
         build:
-          commands: ["pnpm run build"]
+          commands: 
+            - pnpm run build
       artifacts:
         baseDirectory: fe/build
         files:
