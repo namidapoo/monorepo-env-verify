@@ -1,3 +1,4 @@
+import { KEY1, KEY2 } from "~/lib/constants";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
 
@@ -19,6 +20,39 @@ export function Welcome({ message }: { message: string }) {
             />
           </div>
         </header>
+
+        <div className="max-w-md mx-auto mt-10 p-4 border rounded-lg shadow-md bg-white dark:bg-gray-900">
+          <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 text-center mb-4">
+            Sample of Accessing Env with React Router v7 and Cloudflare Workers
+          </h1>
+          <table className="w-full text-left text-sm text-gray-700 dark:text-gray-300">
+            <thead>
+              <tr className="border-b dark:border-gray-700">
+                <th className="py-2 px-3">Key</th>
+                <th className="py-2 px-3">Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b dark:border-gray-700">
+                <td className="py-2 px-3 font-medium">KEY(Refer directly to import.meta.env)</td>
+                <td className="py-2 px-3">{import.meta.env.KEY}</td>
+              </tr>
+              <tr className="border-b dark:border-gray-700">
+                <td className="py-2 px-3 font-medium">VITE_KEY(Refer directly to import.meta.env)</td>
+                <td className="py-2 px-3">{import.meta.env.VITE_KEY}</td>
+              </tr>
+              <tr className="border-b dark:border-gray-700">
+                <td className="py-2 px-3 font-medium">KEY(Referenced through constants)</td>
+                <td className="py-2 px-3">{KEY1}</td>
+              </tr>
+              <tr>
+                <td className="py-2 px-3 font-medium">VITE_KEY(Referenced through constants)</td>
+                <td className="py-2 px-3">{KEY2}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
         <div className="max-w-[300px] w-full space-y-6 px-4">
           <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
             <p className="leading-6 text-gray-700 dark:text-gray-200 text-center">

@@ -20,3 +20,4 @@ cdk.out
 .wrangler
 .dev.vars*
 
+.env
